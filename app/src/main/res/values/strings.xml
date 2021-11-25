@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MyFirstAppCompose</string>
+
+    <string name="jetpack_fundamentals">Jetpack Compose - Fundamentos</string>
+    <string name="jetpack_university">Jetpack University</string>
+    <string name="views">247 views</string>
+    <string name="time_video_updload"> - two weeks ago </string>
+    <string name="video_total_time">26:15</string>
+
+    <string name="content_background">Background Image</string>
+    <string name="content_logo">Jetpack Logo</string>
 </resources>
