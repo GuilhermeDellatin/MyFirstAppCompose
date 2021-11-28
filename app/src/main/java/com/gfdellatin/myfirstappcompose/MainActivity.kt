@@ -38,6 +38,7 @@ fun FeedItem() {
 
     Column(
         modifier = Modifier
+            .padding(all = 8.dp)
             .background(Color.DarkGray, RoundedCornerShape(16.dp))
             .clip(RoundedCornerShape(16.dp))
     ) {
