@@ -55,6 +55,18 @@ fun FeedItem() {
                     .align(Alignment.BottomEnd)
                     .padding(8.dp, 8.dp)
             )
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .padding(8.dp)
+            ) {
+                Image(
+                    alignment = Alignment.CenterEnd,
+                    painter = painterResource(id = R.drawable.ic_baseline_more),
+                    contentDescription = stringResource(id = R.string.content_more_functions),
+                )
+            }
         }
 
         Row(
@@ -67,7 +79,6 @@ fun FeedItem() {
                 modifier = Modifier
                     .clip(CircleShape)
                     .size(40.dp),
-
                 )
             Column {
                 Text(text = stringResource(id = R.string.jetpack_fundamentals), color = Color.White)
@@ -93,6 +104,15 @@ fun FeedItem() {
                     )
                 }
             }
+
+            Image(
+                painter = painterResource(id = R.drawable.ic_baseline_play_arrow),
+                contentDescription = stringResource(id = R.string.content_play_arrow),
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .size(40.dp),
+
+                )
         }
     }
 
