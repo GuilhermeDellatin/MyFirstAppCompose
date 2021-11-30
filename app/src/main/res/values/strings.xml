@@ -9,4 +9,6 @@
 
     <string name="content_background">Background Image</string>
     <string name="content_logo">Jetpack Logo</string>
+    <string name="content_play_arrow">Icone de iniciar o video</string>
+    <string name="content_more_functions">Mais funções</string>
 </resources>
