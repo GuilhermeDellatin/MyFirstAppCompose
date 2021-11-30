@@ -117,31 +117,11 @@ fun FeedItem() {
     }
 
 }
-/*
-@Composable
-fun CustomText(@StringRes textResId: Int) {
-    Text(
-        text = stringResource(id = textResId),
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-            .clickable {
-                Log.d("Welcome", "Clicked")
-            },
-        color = Color.Green,
-        //fontSize = 18.sp,
-        //fontWeight = FontWeight.Bold,
-        //fontFamily = LatoFamily,
-        textAlign = TextAlign.Center,
-        style = MaterialTheme.typography.body1
-    )
-}*/
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     MyFirstAppComposeTheme {
-        //CustomText(textResId = R.string.app_name)
         FeedItem()
     }
 }
