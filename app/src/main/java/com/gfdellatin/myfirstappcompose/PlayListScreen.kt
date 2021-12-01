@@ -17,7 +17,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.gfdellatin.myfirstappcompose.ui.theme.MyFirstAppComposeTheme
 
 @Composable
 fun FeedItem() {
@@ -106,8 +105,6 @@ fun FeedItem() {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
-    MyFirstAppComposeTheme {
+fun PlayListPreview() {
         FeedItem()
-    }
 }
