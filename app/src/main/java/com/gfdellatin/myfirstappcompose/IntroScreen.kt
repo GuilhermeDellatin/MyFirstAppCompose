@@ -18,11 +18,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.gfdellatin.myfirstappcompose.ui.theme.BackgroundJetPackLogoColor
 
 @ExperimentalAnimationApi
 @Composable
-fun IntroScreen() {
+fun IntroScreen(
+    navController: NavController
+) {
 
     Card(
         modifier = Modifier.padding(16.dp, 16.dp),
@@ -39,6 +43,9 @@ fun IntroScreen() {
             )
             AnimatedVisibility(expanded) {
                 Text(
+                    modifier = Modifier.clickable {
+                        navController.navigate(route = NavControllerScreen.PlayList.route)
+                    },
                     text = stringResource(R.string.jetpack_university),
                     fontSize = 24.sp,
                     color = Color.White,
@@ -54,5 +61,7 @@ fun IntroScreen() {
 @Preview(showBackground = true)
 @Composable
 fun IntroScreenPreview() {
-    IntroScreen()
+    IntroScreen(
+        navController = rememberNavController()
+    )
 }
