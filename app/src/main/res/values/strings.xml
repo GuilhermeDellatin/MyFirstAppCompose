@@ -11,4 +11,6 @@
     <string name="content_logo">Jetpack Logo</string>
     <string name="content_play_arrow">Icone de iniciar o video</string>
     <string name="content_more_functions">Mais funções</string>
+    <string name="content_back_to_intro">Icone de voltar para a tela inicial</string>
+    <string name="content_forward_playlist">Icone de avançar para a tela de videos</string>
 </resources>
