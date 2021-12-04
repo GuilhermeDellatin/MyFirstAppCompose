@@ -2,6 +2,7 @@ package com.gfdellatin.myfirstappcompose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -17,9 +18,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun FeedItem() {
+fun FeedItem(
+    navController: NavController
+) {
 
     Column(
         modifier = Modifier
@@ -40,6 +45,25 @@ fun FeedItem() {
                     .align(Alignment.BottomEnd)
                     .padding(8.dp, 8.dp)
             )
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(8.dp)
+            ) {
+                Image(
+                    modifier = Modifier.clickable {
+                        navController.navigate(route = NavControllerScreen.Intro.route) {
+                            popUpTo(NavControllerScreen.Intro.route) {
+                                inclusive = true
+                            }
+                        }
+                    },
+                    alignment = Alignment.CenterEnd,
+                    painter = painterResource(id = R.drawable.ic_arrow_back),
+                    contentDescription = stringResource(id = R.string.content_back_to_intro),
+                )
+            }
             Row(
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
                 modifier = Modifier
@@ -106,5 +130,8 @@ fun FeedItem() {
 @Preview(showBackground = true)
 @Composable
 fun PlayListPreview() {
-        FeedItem()
+    FeedItem(
+        navController = rememberNavController(
+        )
+    )
 }
