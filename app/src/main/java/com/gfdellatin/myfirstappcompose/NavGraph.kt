@@ -23,7 +23,7 @@ fun SetupNavGraph(
         composable(
             route = NavControllerScreen.PlayList.route
         ) {
-            FeedItem()
+            FeedItem(navController = navController)
         }
 
     }
