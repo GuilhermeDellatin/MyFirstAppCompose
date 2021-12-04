@@ -43,30 +43,33 @@ fun IntroScreen(
                 contentDescription = stringResource(id = R.string.content_logo)
             )
             AnimatedVisibility(expanded) {
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(16.dp),
-                    modifier = Modifier.padding(16.dp)
-                ) {
-                    Text(
-                        modifier = Modifier.clickable {
-                            navController.navigate(route = NavControllerScreen.PlayList.route)
-                        },
-                        text = stringResource(R.string.jetpack_university),
-                        fontSize = 24.sp,
-                        color = Color.White,
-                        fontWeight = FontWeight.Light,
-                        textAlign = TextAlign.Justify
-                    )
-                    Image(
-                        modifier = Modifier
-                            .clickable {
+                Column {
+                    Spacer(modifier = Modifier.size(8.dp))
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                        modifier = Modifier.padding(16.dp)
+                    ) {
+                        Text(
+                            modifier = Modifier.clickable {
                                 navController.navigate(route = NavControllerScreen.PlayList.route)
-                            }
-                            .size(40.dp),
-                        painter = painterResource(id = R.drawable.ic_arrow_forward),
-                        contentDescription = stringResource(id = R.string.content_forward_playlist),
-                        alignment = Alignment.CenterEnd
-                    )
+                            },
+                            text = stringResource(R.string.jetpack_university),
+                            fontSize = 24.sp,
+                            color = Color.White,
+                            fontWeight = FontWeight.Light,
+                            textAlign = TextAlign.Justify
+                        )
+                        Image(
+                            modifier = Modifier
+                                .clickable {
+                                    navController.navigate(route = NavControllerScreen.PlayList.route)
+                                }
+                                .size(30.dp),
+                            painter = painterResource(id = R.drawable.ic_arrow_forward),
+                            contentDescription = stringResource(id = R.string.content_forward_playlist),
+                            alignment = Alignment.TopEnd
+                        )
+                    }
                 }
             }
         }
